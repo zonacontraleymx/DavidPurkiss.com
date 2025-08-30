@@ -1,1 +1,19 @@
+backend:
+  name: git-gateway
+  branch: main # Cambia esto si tu rama principal no es 'main'
 
+publish_mode: editorial_workflow # Opcional: para un flujo de trabajo con borradores
+
+media_folder: "static/uploads" # El camino para almacenar los archivos subidos
+public_folder: "/uploads" # La URL pública de la carpeta
+
+collections:
+  - name: "blog" # Un nombre para tu colección (por ejemplo, "blog")
+    label: "Blog" # La etiqueta que se muestra en el panel de administración
+    folder: "content/blog" # La carpeta donde se guardarán tus entradas
+    create: true # Permite crear nuevas entradas
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # El formato del nombre del archivo
+    fields: # Los campos para cada entrada
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Cuerpo", name: "body", widget: "markdown"}
