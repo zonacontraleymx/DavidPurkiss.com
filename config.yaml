@@ -1,4 +1,4 @@
 baseURL: "https://davidpurkissmx.netlify.app"
 languageCode: "en-us"
 title: "David Purkiss"
-theme: "netlify-basic"
+theme: "https://github.com/athul/archie.git"
