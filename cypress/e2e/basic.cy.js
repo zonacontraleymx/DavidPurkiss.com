@@ -1,7 +1,3 @@
-[[plugins]]
-  package = "netlify-plugin-cypress"
-   disable = true   descomenta si quieres deshabilitarlo
-
 describe('empty spec', () => {
   beforeEach(() => {
     cy.visit('/')
